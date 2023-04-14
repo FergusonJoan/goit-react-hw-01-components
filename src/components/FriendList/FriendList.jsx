@@ -1,5 +1,5 @@
 import style from './FriendList.module.scss';
-import friends from '../../data/friends';
+import friends from 'data/friends.json';
 
 import FriendListItem from './FriendListItem/FriendListItem';
 

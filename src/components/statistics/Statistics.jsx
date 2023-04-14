@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 
 import style from './Statistics.module.scss';
-import data from '../../data/data';
+import data from 'data/data.json';
 
 const Statistics = ({ title }) => {
   function getRandomHexColor() {
