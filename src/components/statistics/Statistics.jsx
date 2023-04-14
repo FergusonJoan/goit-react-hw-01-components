@@ -1,17 +1,17 @@
 import PropTypes from 'prop-types';
 
 import style from './Statistics.module.scss';
-import data from '../../data';
+import data from '../../data/data';
 
-// В компоненті Statistics для заголовка повинен бути рендер по умові. Якщо переданий prop title потрібно рендерити заголовок {title && <h2>{title}</h2>}
-
-const Statistics = ({ title, stats }) => {
+const Statistics = ({ title }) => {
   function getRandomHexColor() {
-    return `${Math.floor(Math.random() * 16777215).toString(16)}`;
+    return `#${Math.floor(Math.random() * 16777215)
+      .toString(16)
+      .padStart(6, 0)}`;
   }
 
   return (
-    <section className={style.stats}>
+    <section className={style.statistics}>
       {title && <h2 className={style.title}>{title}</h2>}
 
       <ul className={style.statList}>
@@ -33,7 +33,7 @@ const Statistics = ({ title, stats }) => {
 };
 
 Statistics.propTypes = {
-  title: PropTypes.string.isRequired,
+  title: PropTypes.string,
   stats: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.string.isRequired,

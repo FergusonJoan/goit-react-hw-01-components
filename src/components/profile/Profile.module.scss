@@ -1,18 +1,20 @@
 .profile {
   margin: 0 auto;
-  margin-top: 50px;
-  margin-bottom: 50px;
 
   width: 300px;
-  border: 1px solid rgba(219, 226, 233, 0.374);
+  border: 1px solid rgba(199, 206, 212, 0.374);
   border-radius: 3px;
-  background-color: aliceblue;
+  background-color: rgba(248, 241, 232, 0.879);
+  box-shadow: 1px 2px 8px 3px rgba(0, 0, 0, 0.53);
+  -webkit-box-shadow: 1px 2px 8px 3px rgba(0, 0, 0, 0.53);
+  -moz-box-shadow: 1px 2px 8px 3px rgba(0, 0, 0, 0.53);
 }
 .description {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 30px;
+  padding: 25px;
+  padding-bottom: 40px;
   .avatar {
     width: 100px;
     height: 100px;
@@ -28,19 +30,44 @@
   .tag {
     margin: 0 0 10px 0;
     font-size: 16px;
-    color: rgb(175, 173, 173);
+    color: rgba(80, 73, 73, 0.548);
   }
   .location {
     margin: 0;
     font-size: 16px;
     font-weight: 600;
-    color: rgb(175, 173, 173);
+    color: rgba(80, 73, 73, 0.548);
   }
 }
 
 .stats {
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+
+  background-color: rgb(232, 245, 247);
+
+  & > li {
+    width: 33%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid rgba(199, 206, 212, 0.374);
+    padding: 15px 15px;
+  }
   .label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 6px;
+    color: rgba(80, 73, 73, 0.548);
   }
   .quantity {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-weight: bold;
   }
 }
