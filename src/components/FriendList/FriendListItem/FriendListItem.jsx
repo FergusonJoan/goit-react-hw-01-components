@@ -2,7 +2,7 @@ import style from './FriendListItem.module.scss';
 import clsx from 'clsx';
 import PropTypes from 'prop-types';
 
-const FriendListItem = props => {
+export const FriendListItem = props => {
   const { avatar, name, isOnline } = props;
 
   return (
@@ -19,5 +19,3 @@ FriendListItem.propTypes = {
   name: PropTypes.string,
   isOnline: PropTypes.bool,
 };
-
-export default FriendListItem;

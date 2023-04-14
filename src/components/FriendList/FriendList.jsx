@@ -1,9 +1,9 @@
 import style from './FriendList.module.scss';
 import friends from 'data/friends.json';
 
-import FriendListItem from './FriendListItem/FriendListItem';
+import { FriendListItem } from './FriendListItem/FriendListItem';
 
-const FriendList = () => {
+export const FriendList = () => {
   return (
     <ul className={style.friendList}>
       {friends.map(({ id, avatar, name, isOnline }) => {
@@ -19,5 +19,3 @@ const FriendList = () => {
     </ul>
   );
 };
-
-export default FriendList;

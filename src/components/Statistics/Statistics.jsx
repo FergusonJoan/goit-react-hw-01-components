@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import style from './Statistics.module.scss';
 import data from 'data/data.json';
 
-const Statistics = ({ title }) => {
+export const Statistics = ({ title }) => {
   function getRandomHexColor() {
     return `#${Math.floor(Math.random() * 16777215)
       .toString(16)
@@ -42,5 +42,3 @@ Statistics.propTypes = {
     })
   ),
 };
-
-export default Statistics;
