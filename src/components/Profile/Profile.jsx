@@ -1,9 +1,7 @@
 import PropTypes from 'prop-types';
 import style from './Profile.module.scss';
 
-export const Profile = props => {
-  const { username, tag, location, avatar, stats } = props;
-
+export const Profile = ({ username, tag, location, avatar, stats }) => {
   return (
     <div className={style.profile}>
       <div className={style.description}>
@@ -41,4 +39,4 @@ Profile.propTypes = {
     views: PropTypes.number.isRequired,
     likes: PropTypes.number.isRequired,
   }),
-};
+}.isRequired;

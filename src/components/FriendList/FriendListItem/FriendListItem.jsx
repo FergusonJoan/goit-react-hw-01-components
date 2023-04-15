@@ -2,9 +2,7 @@ import style from './FriendListItem.module.scss';
 import clsx from 'clsx';
 import PropTypes from 'prop-types';
 
-export const FriendListItem = props => {
-  const { avatar, name, isOnline } = props;
-
+export const FriendListItem = ({ avatar, name, isOnline }) => {
   return (
     <li className={style.item}>
       <span className={clsx(style.status, isOnline && style.isOnline)}></span>

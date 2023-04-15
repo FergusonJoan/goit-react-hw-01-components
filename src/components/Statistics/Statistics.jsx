@@ -2,14 +2,9 @@ import PropTypes from 'prop-types';
 
 import style from './Statistics.module.scss';
 import data from 'data/data.json';
+import getRandomHexColor from 'utils/utils.js';
 
 export const Statistics = ({ title }) => {
-  function getRandomHexColor() {
-    return `#${Math.floor(Math.random() * 16777215)
-      .toString(16)
-      .padStart(6, 0)}`;
-  }
-
   return (
     <section className={style.statistics}>
       {title && <h2 className={style.title}>{title}</h2>}
@@ -20,7 +15,7 @@ export const Statistics = ({ title }) => {
             <li
               className={style.item}
               key={el.id}
-              style={{ backgroundColor: `${getRandomHexColor()}` }}
+              style={{ backgroundColor: getRandomHexColor() }}
             >
               <span className={style.label}>{el.label}</span>
               <span className={style.percentage}>{el.percentage}%</span>
@@ -40,5 +35,5 @@ Statistics.propTypes = {
       label: PropTypes.string.isRequired,
       percentage: PropTypes.number.isRequired,
     })
-  ),
+  ).isRequired,
 };
